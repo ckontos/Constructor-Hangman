@@ -27,7 +27,7 @@ var wordObject = {
             }
         }
         //letterrepeat = false means no matches were found
-        if (repeatCounter == 0) {
+        if (repeatCounter === 0) {
             this.letterRepeat = false;
             this.checkMatch();
         }
@@ -48,7 +48,7 @@ var wordObject = {
             }
         }
 
-        if (matchCounter == 0) {
+        if (matchCounter === 0) {
             this.letterMatch = false;
             this.checkMatchRepeat();
         }
@@ -59,20 +59,20 @@ var wordObject = {
     },
     checkMatchRepeat: function() {
         //repeat letter guessesd removed from variable....pop() removesw the last added element
-        if (this.letterRepeat == true) {
+        if (this.letterRepeat === true) {
             this.allGuesses.pop(main.toWordJS.userLetter);
 
             return true;
         }
         //Puts the userletter in incorrectGuesses if no match is found
-        if (this.letterRepeat == false && this.letterMatch == false) {
+        if (this.letterRepeat === false && this.letterMatch === false) {
             this.incorrectGuesses.push(main.toWordJS.userLetter);
             this.guessesRemaining--;
 
             return true;
         }
         //same for correct guess
-        if (this.letterRepeat == false && this.letterMatch == true) {
+        if (this.letterRepeat === false && this.letterMatch === true) {
             this.correctGuesses.push(main.toWordJS.userLetter);
             this.guessesRemaining--;
 

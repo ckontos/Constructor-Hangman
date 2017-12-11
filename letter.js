@@ -9,7 +9,7 @@ var displayObject = {
     displayNewGuess: function() {
         //If there are no correctGuesses,
         //For the number of letters in the word name, fill the displayed guesses with an underscore.
-        if (word.toLetterJS.correctGuesses.length == 0 || word.toLetterJS.correctGuesses == null) {
+        if (word.toLetterJS.correctGuesses.length === 0 || word.toLetterJS.correctGuesses === null) {
             for (var i = 0; i < game.toLetterJS.wordLetters.length; i++) {
                 this.correctGuessesArr[i] = "_";
             }
@@ -22,7 +22,7 @@ var displayObject = {
                     //Loop for correctGuesses length number of times,
                     for (var j = 0; j < word.toLetterJS.correctGuesses.length; j++) {
                         //If the correctGuesses at j is equal to wordLetters at i, the displayedGuess becomes the word letter at index i
-                        if (word.toLetterJS.correctGuesses[j] == game.toLetterJS.wordLetters[i]) {
+                        if (word.toLetterJS.correctGuesses[j] === game.toLetterJS.wordLetters[i]) {
                             this.correctGuessesArr[i] = game.toLetterJS.wordLetters[i];
                         }
                         //the displayedGuess at index i becomes an underscore.
@@ -48,7 +48,7 @@ var displayObject = {
         }
 
         //If the counter is the length of the band name, the user has won.
-        if (counter == game.toLetterJS.wordLetters.length) {
+        if (counter === game.toLetterJS.wordLetters.length) {
 
             main.toLetterJS.roundComplete = true;
             word.toLetterJS.winCount++;
@@ -60,7 +60,7 @@ var displayObject = {
             main.toLetterJS.resetVariables();
         }
         //If the number of guesses remaining is zero, the user has lost.
-        if (word.toLetterJS.guessesRemaining == 0) {
+        if (word.toLetterJS.guessesRemaining === 0) {
 
             main.toLetterJS.roundComplete = true;
             word.toLetterJS.loseCount++;

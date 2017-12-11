@@ -42,7 +42,7 @@ var promptUser = function() {
         name: "letter",
         message: "Pick a letter: ",
         validate: function(value) {
-            if (isNaN(value) == true) {
+            if (isNaN(value) === true) {
                 return true;
             }
             else {
@@ -70,10 +70,10 @@ var promptUser = function() {
         //function to check if the game is still going
         letter.toMainJS.checkProgress();
 
-        if (playerStuff.roundComplete == false) {
+        if (playerStuff.roundComplete === false) {
             promptUser();
         }
-        else if (playerStuff.roundComplete == true) {
+        else if (playerStuff.roundComplete === true) {
             playerStuff.startRound();
         }
 
